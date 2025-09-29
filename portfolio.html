@@ -67,7 +67,7 @@
       
       <div class="container section-title" data-aos="fade-up">
         <h2>Portfolio</h2>
-        <p>Showcasing creativity, code, and craftsmanship in every project.</p>
+        <p>Showcasing creativity, code, and craftsmanship in every project. <br>  The projects listed here can be accessed without credentials; other projects I have contributed to are not included.</p>
       </div>
 
       <div class="container">
@@ -80,25 +80,56 @@
 
           <div class="cards-container" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="card portfolio-item isotope-item filter-app">
-              <img src="assets\img\portfolio\wow.svg" class="img-fluid" alt="">
+            <div class="card portfolio-item isotope-item filter-product">
+              <div class="cover-text">
+                <h2 class="bounce-text">Engagement Survey</h2>
+              </div>
               <div class="portfolio-info">
-                <h4>WOW Engagement</h4>
-                <p>Tech - Html/Css/Nextjs</p>
-                <a href="https://engagement.jombay.com/wow_reviews" target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <h4>Engagement Survey</h4>
+                <p>Tech - Html/Css/Nextjs/Reactjs</p>
+                <a href="https://www.jombay.com/" target="_blank" title="More Details" class="details-link">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
               </div>
             </div>
+            
             <div class="card portfolio-item isotope-item filter-product">
-              <img src="assets\img\portfolio\jombay.svg" width="415" height="220" class="img-fluid" alt="">
+              <div class="cover-text">
+                <h2 class="bounce-text">Jombay</h2>
+              </div>
               <div class="portfolio-info">
-                <h4>Jombay Website</h4>
+                <h4>Jombay</h4>
                 <p>Tech - Html/Css/Nextjs/Reactjs</p>
                 <a href="https://www.jombay.com/" target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
 
+            <div class="card portfolio-item isotope-item filter-product">
+              <div class="cover-text">
+                <h2 class="bounce-text">Prosculpt</h2>
+              </div>
+              <div class="portfolio-info">
+                <h4>Prosculpt</h4>
+                <p>Tech - Html/Css/Nextjs/Gsap/Material UI</p>
+                <a href="https://www.prosculpt.co/students/" target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
+            <div class="card portfolio-item isotope-item filter-product">
+              <div class="cover-text">
+                <h2 class="bounce-text">Ezycomp</h2>
+              </div>
+              <div class="portfolio-info">
+                <h4>Ezycomp</h4>
+                <p>Tech - Html/Css/Nextjs/Material UI/Bootstrap Css</p>
+                <a href="https://www.ezycomp.com/" target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
             <div class="card portfolio-item isotope-item filter-branding">
-              <img src="assets\img\portfolio\foodwebsite.jpg" class="img-fluid" alt="">
+              <div class="cover-text">
+                <h2 class="bounce-text">Mac Donalds</h2>
+              </div>
               <div class="portfolio-info">
                 <h4>Food Order - Website</h4>
                 <p>Tech - Html/Css/Bootstrap/Reactjs</p>
@@ -106,17 +137,10 @@
               </div>
             </div>
 
-            <div class="card portfolio-item isotope-item filter-app">
-              <img src="assets\img\portfolio\finzome.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>FormData Viewer</h4>
-                <p>Tech - Reactjs</p>
-                <a href="https://finzometechassignment-qv2bnfvc0-chaitanya7888.vercel.app/"  target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-
             <div class="card portfolio-item isotope-item filter-product">
-              <img src="assets\img\portfolio\foodmeals.png" class="img-fluid" alt="">
+              <div class="cover-text">
+                <h2 class="bounce-text">Food Website</h2>
+              </div>
               <div class="portfolio-info">
                 <h4>Food Website</h4>
                 <p>Tech - Reactjs</p>
@@ -165,6 +189,24 @@
 
   
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const bounceTexts = document.querySelectorAll(".bounce-text");
+
+    bounceTexts.forEach(el => {
+      const text = el.textContent;
+      el.textContent = "";
+
+      text.split("").forEach((char, i) => {
+        const span = document.createElement("span");
+        span.textContent = char;
+        span.style.animationDelay = `${i * 0.20}s`;
+        el.appendChild(span);
+      });
+    });
+  });
+  </script>
 
 </body>
 
